@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno & Ana Beatriz</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVEGAÇÃO -->
+<nav class="navbar">
+  <a href="#historia">Nossa História</a>
+  <a href="#memorias">Memórias</a>
+  <a href="#carta">Para Você</a>
+</nav>
+
+  <main class="romance-site">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">Uma história nossa</p>
+      <div class="names">
+        Bruno
+        <span class="ampersand">&</span>
+        Ana Beatriz
+      </div>
+      <p class="since">desde 08 de dezembro de 2024</p>
+    </section>
+
+    <!-- CONTADOR -->
+    <section class="counter-section">
+      <div class="counter-block">
+        <span class="counter-number" id="dias">—</span>
+        <span class="counter-label">dias</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-block">
+        <span class="counter-number" id="meses">—</span>
+        <span class="counter-label">meses</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-block">
+        <span class="counter-number" id="horas">—</span>
+        <span class="counter-label">horas juntos</span>
+      </div>
+    </section>
+
+    <!-- LINHA DO TEMPO -->
+  <section class="timeline-section" id="historia">
+      <p class="section-label">Nossa história</p>
+      <div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <p class="timeline-event">Primeiro Date</p>
+    <p class="timeline-desc">O nervosismo que a gente disfarça com sorriso. O momento em que percebemos que queria mais daquilo.</p>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <p class="timeline-event">Primeira Viagem</p>
+    <p class="timeline-desc">Descobrir que viajar ao lado de alguém é diferente de qualquer lugar que você já foi sozinho.</p>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <p class="timeline-event">Primeira Ida ao Estádio</p>
+    <p class="timeline-desc">Entre a torcida e o barulho, olhei pro lado e percebi que o melhor do dia era você estar lá.</p>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <p class="timeline-event">Memória Especial</p>
+    <p class="timeline-desc">Tem momentos que a gente não planeja e que ficam pra sempre. Esse foi um deles.</p>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <p class="timeline-event">Nossa Foto</p>
+    <p class="timeline-desc">Uma imagem que guardo não só no celular, mas na memória — do jeito que você estava, do jeito que eu me senti.</p>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <p class="timeline-event">Juntos</p>
+    <p class="timeline-desc">No fim, não é sobre os lugares ou as datas. É sobre ter você do lado — e querer continuar assim.</p>
+  </div>
+</div>
+
+    <!-- GALERIA -->
+<section class="gallery-section" id="memorias">
+  <p class="section-label">Memórias</p>
+  <div class="gallery-grid">
+    <div class="gallery-slot filled">
+      <img src="img/Primeiro Date.jpeg" alt="Primeiro Date" />
+    </div>
+    <div class="gallery-slot filled">
+      <img src="img/Primeira Viagem.jpeg" alt="Primeira Viagem" />
+    </div>
+    <div class="gallery-slot filled">
+      <img src="img/Primeira Ida ao Estádio.jpeg" alt="No Estádio" />
+    </div>
+    <div class="gallery-slot filled">
+      <img src="img/Memória Especial.jpeg" alt="Memória Especial" />
+    </div>
+    <div class="gallery-slot filled">
+      <img src="img/Nossa Foto.jpeg" alt="Nossa Foto" />
+    </div>
+    <div class="gallery-slot filled">
+      <img src="img/Juntos.jpeg" alt="Juntos" />
+    </div>
+  </div>
+</section>
+
+    <!-- CARTA -->
+    <section class="letter-section" id="carta">
+      <p class="section-label">Para você</p>
+      <blockquote class="letter">
+        Ana Beatriz,<br><br>
+        Tem certas pessoas que chegam na nossa vida e mudam silenciosamente a forma como enxergamos tudo.
+        Você foi assim — sem aviso, sem pressa, com a leveza de quem não precisa de palco pra brilhar.<br><br>
+        Cada momento ao seu lado virou uma memória que eu escolho guardar. O jeito que você ri,
+        a forma como faz até o ordinário parecer especial, a paz que me passa só de estar perto.<br><br>
+        Não tenho palavras grandes o suficiente. Só sei que, de 08 de dezembro pra cá,
+        até os dias comuns ficaram melhores.
+      </blockquote>
+      <p class="letter-signature">— Bruno</p>
+    </section>
+
+  </main>
+
+ <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+
+    <!-- MÚSICA -->
+    <div class="music-btn" id="musicBtn" title="Tocar música">♪</div>
+    <audio id="audio" loop>
+      <source src="img/musica.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="js/animations.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/music.js"></script>
+
+  </body>
+
+</nav>
+
+</html>
