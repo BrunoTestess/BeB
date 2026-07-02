@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bruno & Ana Beatriz</title>
+  <title>Nuninho & Titize</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,9 +23,9 @@
     <section class="hero">
       <p class="eyebrow">Uma história nossa</p>
       <div class="names">
-        Bruno
+        Nuninho
         <span class="ampersand">&</span>
-        Ana Beatriz
+        Titize
       </div>
       <p class="since">desde 08 de dezembro de 2024</p>
     </section>
@@ -113,7 +113,7 @@
     <section class="letter-section" id="carta">
       <p class="section-label">Para você</p>
       <blockquote class="letter">
-        Ana Beatriz,<br><br>
+       Titize,<br><br>
         Tem certas pessoas que chegam na nossa vida e mudam silenciosamente a forma como enxergamos tudo.
         Você foi assim — sem aviso, sem pressa, com a leveza de quem não precisa de palco pra brilhar.<br><br>
         Cada momento ao seu lado virou uma memória que eu escolho guardar. O jeito que você ri,
@@ -121,16 +121,41 @@
         Não tenho palavras grandes o suficiente. Só sei que, de 08 de dezembro pra cá,
         até os dias comuns ficaram melhores.
       </blockquote>
-      <p class="letter-signature">— Bruno</p>
+      <p class="letter-signature">— Nuninho</p>
     </section>
+
+    <!-- CARTA SECRETA -->
+<section class="secret-section" id="segredo">
+  <p class="section-label">Algo escondido</p>
+  <div class="secret-lock" id="secretLock">
+    <p class="secret-hint">Só você sabe como abrir.</p>
+    <input type="password" id="secretInput" placeholder="••••••••" />
+    <button id="secretBtn">Abrir</button>
+    <p class="secret-error" id="secretError"></p>
+  </div>
+  <div class="secret-message" id="secretMessage">
+    <blockquote class="letter">
+      PrincessTitize,<br><br>
+      Se você chegou até aqui, é porque sabe que tem algo especial guardado só pra você.
+      Não é pra todo mundo — é só seu.<br><br>
+      Você é a pessoa que eu escolho todo dia, sem hesitar. A que faz até os momentos
+      simples parecerem inesquecíveis. A que eu quero do lado em tudo — nas aventuras,
+      nos dias comuns, nos momentos em que o mundo parece grande demais.<br><br>
+      Obrigado por existir do jeito que você é. Obrigado por ser minha.
+    </blockquote>
+    <p class="letter-signature">— Seu Nuninho 🤍</p>
+  </div>
+</section>
 
   </main>
 
  <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightboxClose">✕</button>
-      <img src="" alt="" id="lightboxImg" />
-    </div>
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-nav" id="prevBtn">&#8592;</button>
+  <img src="" alt="" id="lightboxImg" />
+  <button class="lightbox-nav" id="nextBtn">&#8594;</button>
+</div>
 
     <!-- MÚSICA -->
     <div class="music-btn" id="musicBtn" title="Tocar música">♪</div>
@@ -138,6 +163,10 @@
       <source src="img/musica.mp3" type="audio/mpeg" />
     </audio>
 
+    <script src="js/segredo.js"></script>
+    <script src="js/noturno.js"></script>
+    <script src="js/easteregg.js"></script>
+    <script src="js/petalas.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/lightbox.js"></script>

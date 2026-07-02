@@ -335,18 +335,35 @@ body {
   border-radius: 4px;
 }
 
-.lightbox-close {
+.lightbox-nav {
   position: fixed;
-  top: 1.25rem;
-  right: 1.5rem;
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-  background: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
   border: none;
-  line-height: 1;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  color: white;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1001;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#prevBtn {
+  left: 1.5rem;
+}
+
+#nextBtn {
+  right: 1.5rem;
 }
 
 .lightbox-close:hover {
@@ -427,4 +444,229 @@ body {
 
 .navbar a:hover {
   color: #1a1a1a;
+}
+
+/* ============================================
+   PÉTALAS
+   ============================================ */
+.petala {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #e8c4c4;
+  border-radius: 50% 0 50% 0;
+  opacity: 0;
+  animation: cair linear infinite;
+  pointer-events: none;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   MODO NOTURNO
+   ============================================ */
+body.noturno {
+  background-color: #0e0e0e;
+  color: #e8e8e8;
+}
+
+body.noturno .navbar {
+  background: rgba(14, 14, 14, 0.85);
+  border-bottom-color: #2a2a2a;
+}
+
+body.noturno .navbar a {
+  color: #666;
+}
+
+body.noturno .navbar a:hover {
+  color: #e8e8e8;
+}
+
+body.noturno .hero {
+  border-bottom-color: #2a2a2a;
+}
+
+body.noturno .names {
+  color: #e8e8e8;
+}
+
+body.noturno .eyebrow,
+body.noturno .since,
+body.noturno .section-label,
+body.noturno .counter-label {
+  color: #555;
+}
+
+body.noturno .ampersand {
+  color: #444;
+}
+
+body.noturno .counter-section,
+body.noturno .timeline-section,
+body.noturno .gallery-section,
+body.noturno .letter-section {
+  border-bottom-color: #2a2a2a;
+}
+
+body.noturno .counter-number {
+  color: #e8e8e8;
+}
+
+body.noturno .counter-divider {
+  background: #2a2a2a;
+}
+
+body.noturno .timeline::before {
+  background: #2a2a2a;
+}
+
+body.noturno .timeline-dot {
+  background: #555;
+}
+
+body.noturno .timeline-event {
+  color: #e8e8e8;
+}
+
+body.noturno .timeline-desc {
+  color: #666;
+}
+
+body.noturno .gallery-slot {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+body.noturno .letter {
+  color: #777;
+  border-left-color: #2a2a2a;
+}
+
+body.noturno .letter-signature {
+  color: #e8e8e8;
+}
+
+body.noturno .music-btn {
+  background: #e8e8e8;
+  color: #0e0e0e;
+}
+
+body.noturno .music-btn:hover {
+  background: #ccc;
+}
+
+body.noturno .petala {
+  background: #c9a84c;
+}
+
+/* ============================================
+   CARTA SECRETA
+   ============================================ */
+.secret-section {
+  padding: 2.5rem 2rem;
+  border-top: 0.5px solid #e0e0e0;
+}
+
+.secret-hint {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.secret-lock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+#secretInput {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 0.6rem 1rem;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 6px;
+  outline: none;
+  width: 220px;
+  color: #1a1a1a;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+#secretInput:focus {
+  border-color: #aaa;
+}
+
+#secretBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#secretBtn:hover {
+  background: #333;
+}
+
+.secret-error {
+  font-size: 12px;
+  color: #c0392b;
+  min-height: 16px;
+}
+
+.secret-message {
+  display: none;
+}
+
+.secret-message.visible {
+  display: block;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modo noturno */
+body.noturno .secret-section {
+  border-top-color: #2a2a2a;
+}
+
+body.noturno #secretInput {
+  border-color: #2a2a2a;
+  color: #e8e8e8;
+}
+
+body.noturno #secretBtn {
+  background: #e8e8e8;
+  color: #0e0e0e;
+}
+
+body.noturno #secretBtn:hover {
+  background: #ccc;
 }
